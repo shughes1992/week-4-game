@@ -41,16 +41,17 @@ for (var i = 0; i<= crystalNumber; i++) {
 
 $("#crystal1").on("click", function() {
 
-    var magicValue = ($(this).attr("magicValue"));
-    magicValue = parseInt(magicValue);
+    $("#player-score").text(crystalNumber);
 
-    counter + magicValue;
+    counter++;
 
     console.log("Crystal 1 function "+ this);
 })
-    // this will be hidden until player clicks
-    // onClickUp... player's score counter will be updated
+   
+    // onClick function where the player's score counter will be updated
     $("#crystal2").on("click", function() {
+
+        $("#player-score").text(crystalNumber);
 
         var magicValue = ($(this).attr("magicValue"));
         magicValue = parseInt(magicValue);
@@ -62,6 +63,8 @@ $("#crystal1").on("click", function() {
 // 
 $("#crystal3").on("click", function() {
 
+    $("#player-score").text(crystalNumber);
+
     var magicValue = ($(this).attr("magicValue"));
     magicValue = parseInt(magicValue);
 
@@ -72,6 +75,8 @@ $("#crystal3").on("click", function() {
 
 
 $("#crystal4").on("click", function() {
+
+    $("#player-score").text(crystalNumber);
 
     var magicValue = ($(this).attr("magicValue"));
     magicValue = parseInt(magicValue);
