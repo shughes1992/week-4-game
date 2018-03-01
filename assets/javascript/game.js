@@ -16,19 +16,67 @@ var crystal2 = 0;
 var crystal3 = 0;
 var crystal4 = 0;
 
+
 //clicking on a button "crystal" will add a specific amt of points (1-12) to the player's total score
 var crystalNumber = Math.floor(Math.random() * 12) + 1;
 
+
+
 // for loop through 1-12 
 for (var i = 0; i<= crystalNumber; i++) {
-
     
+    var imageCrystal = $("<img>");
+
+    //class for images = magicCrystals
+
+    imageCrystal.attr("magicValue", crystalNumber[i]);
+
+    $("#crystal1").append(imageCrystal);
+    $("#crystal2").append(imageCrystal);
+    $("#crystal3").append(imageCrystal);
+    $("#crystal4").append(imageCrystal);
+
+    console.log(crystalNumber);
 }
 
-console.log("crystal's value = " + crystalNumber);
+$("#crystal1").on("click", function() {
 
+    var magicValue = ($(this).attr("magicValue"));
+    magicValue = parseInt(magicValue);
+
+    counter + magicValue;
+
+    console.log("Crystal 1 function "+ this);
+})
     // this will be hidden until player clicks
     // onClickUp... player's score counter will be updated
+    $("#crystal2").on("click", function() {
 
-
+        var magicValue = ($(this).attr("magicValue"));
+        magicValue = parseInt(magicValue);
+    
+        counter + magicValue;
+    
+        console.log("Crystal 2 function " + this);
+    })
 // 
+$("#crystal3").on("click", function() {
+
+    var magicValue = ($(this).attr("magicValue"));
+    magicValue = parseInt(magicValue);
+
+    counter + magicValue;
+
+    console.log("Crystal 3 function " + this);
+})
+
+
+$("#crystal4").on("click", function() {
+
+    var magicValue = ($(this).attr("magicValue"));
+    magicValue = parseInt(magicValue);
+
+    counter + magicValue;
+
+    console.log("Crystal 4 function " + this);
+})
